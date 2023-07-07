@@ -24,7 +24,7 @@ const Contact_list =[
 
 // setting up template engine
 app.set('view engine','ejs');
-app.set('views',path.join(__dirname,'Views'));
+app.set('views',path.join(__dirname,'views'));
 
 
 // setting up middleware
@@ -40,7 +40,7 @@ app.get('/delete-contact/:phone',function(req,res){
     if (contact_index != -1){
         Contact_list.splice(contact_index,1);
     }
-    return res.redirect('/')
+    res.redirect('/')
     
 });
 
